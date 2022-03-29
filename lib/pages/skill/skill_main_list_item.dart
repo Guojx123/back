@@ -17,7 +17,7 @@ class SkillMainPageListItem extends StatelessWidget {
       return GestureDetector(
         onTap: onTap,
         child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 8),
+          margin: const EdgeInsets.symmetric(horizontal: 16),
           child: Stack(
             children: <Widget>[
               Container(
