@@ -9,7 +9,7 @@ class AnimatedFloatingActionButton extends StatefulWidget {
   final Color colorEndAnimation;
   final AnimatedIconData animatedIconData;
 
-  AnimatedFloatingActionButton(
+  const AnimatedFloatingActionButton(
       {Key? key,
       required this.fabButtons,
       required this.colorStartAnimation,
@@ -33,10 +33,11 @@ class _AnimatedFloatingActionButtonState extends State<AnimatedFloatingActionBut
 
   @override
   initState() {
-    _animationController = AnimationController(vsync: this, duration: Duration(milliseconds: 500))
-      ..addListener(() {
-        setState(() {});
-      });
+    _animationController =
+        AnimationController(vsync: this, duration: const Duration(milliseconds: 500))
+          ..addListener(() {
+            setState(() {});
+          });
     _animateIcon = Tween<double>(begin: 0.0, end: 1.0).animate(_animationController);
     _translateButton = Tween<double>(
       begin: _fabHeight,
