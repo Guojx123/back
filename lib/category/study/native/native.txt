@@ -1,0 +1,32 @@
+# Flutter与原生端交互-Android
+原生与Flutter数据交互，主要就是构建好通道机制
+
+Flutter 与原生交互使用Platform Channel。Flutter定义了三种不同类型的Channel，它们分别是：
+BasicMessageChannel：用于传递字符串和半结构化的信息（双向有返回值）。
+MethodChannel：用于传递方法调用（method invocation）（双向有返回值）。
+EventChannel: 用于数据流（event streams）的通信（仅支持数据单向传递，无返回值）。
+
+三种Channel之间互相独立，各有用途，但它们在设计上却非常相近。每种Channel均有三个重要成员变量：
+
+name:  String类型，代表Channel的名字，也是其唯一标识符。
+messager：BinaryMessenger类型，代表消息信使，是消息的发送与接收的工具。
+codec: MessageCodec类型或MethodCodec类型，代表消息的编解码器。
+
+## a.BasicMessageChannel
+
+Flutter 端创建 MethodChannel 通道，用于与原生端通信(名称原生端要与之对应)
+
+```
+static const BasicMessageChannel _basicMessageChannel = const BasicMessageChannel('flutter_demo_jiaohu.flutter.io/basic_message_channel', StandardMessageCodec());
+```
+
+## b.
+## c.
+## d.
+
+
+# Flutter与原生端交互-iOS
+## a.
+## b.
+## c.
+## d.
