@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:back/Pages/easeImport.dart';
-import 'package:back/Pages/providercategory.dart';
 import 'package:back/Widgets/notfound.dart';
+import 'package:back/pages/widget/providercategory.dart';
 import 'package:back/utils/navigatormanager.dart';
 import 'package:back/utils/sp_util.dart';
 import 'package:flutter/material.dart';

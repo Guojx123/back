@@ -1,7 +1,6 @@
-import 'package:back/Pages/mainpage_page_header.dart';
-import 'package:back/Pages/mainpage_page_layout.dart';
 import 'package:back/pages/study/study_main_page.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:back/pages/widget/mainpage_page_header.dart';
+import 'package:back/pages/widget/mainpage_page_layout.dart';
 import 'package:flutter/material.dart';
 
 import 'skill/skill_main_page.dart';
@@ -9,7 +8,7 @@ import 'skill/skill_main_page.dart';
 class MyHomePage extends StatefulWidget {
   final String title;
 
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -45,16 +44,16 @@ class _MyHomePageState extends State<MyHomePage> {
               builder: (context, value, widget) {
                 return Container(
                   color: Color.lerp(
-                    Color(0xFF03A89E),
-                    Color(0xFFFFD700),
+                    const Color(0xFF03A89E),
+                    const Color(0xFFFFD700),
                     notifier.value,
                   ),
                 );
               },
             ),
-            MainPagePageHeader(),
+            const MainPagePageHeader(),
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),

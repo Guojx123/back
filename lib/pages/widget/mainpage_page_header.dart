@@ -1,7 +1,8 @@
-import 'package:back/utils/markdown/widget_markdown_page.dart';
 import 'package:flutter/material.dart';
 
 class MainPagePageHeader extends StatelessWidget {
+  const MainPagePageHeader({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,8 +17,8 @@ class MainPagePageHeader extends StatelessWidget {
                   // Navigator.push(context, MaterialPageRoute(builder: (context) => SearchMainPage()));
                 },
                 child: Container(
-                  margin: EdgeInsets.only(left: 16),
-                  child: Hero(
+                  margin: const EdgeInsets.only(left: 16),
+                  child: const Hero(
                     tag: 'search',
                     child: Icon(
                       Icons.search,
@@ -26,33 +27,14 @@ class MainPagePageHeader extends StatelessWidget {
                   ),
                 ),
               ),
-              Spacer(),
-              GestureDetector(
-                onTap: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => FeedMainPage()));
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          MarkdownPage("lib/category/study/config/" + 'test'),
-                    ),
-                  );
-                },
-                child: Container(
-                  margin: EdgeInsets.only(right: 16),
-                  child: Icon(
-                    Icons.rss_feed,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   // Navigator.push(context, MaterialPageRoute(builder: (context) => AboutMeWidget()));
                 },
                 child: Container(
-                  margin: EdgeInsets.only(right: 16),
-                  child: Icon(
+                  margin: const EdgeInsets.only(right: 16),
+                  child: const Icon(
                     Icons.menu,
                     color: Colors.white,
                   ),
@@ -61,7 +43,7 @@ class MainPagePageHeader extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: kToolbarHeight / 6),
+        const SizedBox(height: kToolbarHeight / 6),
         Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -70,8 +52,8 @@ class MainPagePageHeader extends StatelessWidget {
               'images/logo.png',
               width: 64,
             ),
-            SizedBox(width: 16),
-            Text(
+            const SizedBox(width: 16),
+            const Text(
               'Flutter Back',
               style: TextStyle(
                 fontSize: 48,
