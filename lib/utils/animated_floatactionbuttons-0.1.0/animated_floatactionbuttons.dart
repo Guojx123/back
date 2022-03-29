@@ -28,8 +28,8 @@ class _AnimatedFloatingActionButtonState extends State<AnimatedFloatingActionBut
   Animation<Color>? _buttonColor;
   late Animation<double> _animateIcon;
   late Animation<double> _translateButton;
-  Curve _curve = Curves.easeOut;
-  double _fabHeight = 56.0;
+  final Curve _curve = Curves.easeOut;
+  final double _fabHeight = 56.0;
 
   @override
   initState() {
@@ -38,17 +38,6 @@ class _AnimatedFloatingActionButtonState extends State<AnimatedFloatingActionBut
         setState(() {});
       });
     _animateIcon = Tween<double>(begin: 0.0, end: 1.0).animate(_animationController);
-    _buttonColor = ColorTween(
-      begin: widget.colorStartAnimation,
-      end: widget.colorEndAnimation,
-    ).animate(CurvedAnimation(
-      parent: _animationController,
-      curve: const Interval(
-        0.00,
-        1.00,
-        curve: Curves.linear,
-      ),
-    )) as Animation<Color>?;
     _translateButton = Tween<double>(
       begin: _fabHeight,
       end: -14.0,

@@ -257,7 +257,7 @@ class DartSyntaxHighlighter extends SyntaxHighlighter {
 
       // Words
       if (_scanner.scan(RegExp(r'\w+'))) {
-        late _HighlightType type;
+        _HighlightType? type;
 
         String word = _scanner.lastMatch![0] ?? '';
         if (word.startsWith('_')) word = word.substring(1);
@@ -274,7 +274,8 @@ class DartSyntaxHighlighter extends SyntaxHighlighter {
           type = _HighlightType.constant;
         }
 
-        _spans.add(_HighlightSpan(type, _scanner.lastMatch!.start, _scanner.lastMatch!.end));
+        _spans.add(_HighlightSpan(
+            type ?? _HighlightType.string, _scanner.lastMatch!.start, _scanner.lastMatch!.end));
       }
 
       // Check if this loop did anything
