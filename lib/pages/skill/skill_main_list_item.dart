@@ -17,11 +17,10 @@ class SkillMainPageListItem extends StatelessWidget {
       return GestureDetector(
         onTap: onTap,
         child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: Stack(
             children: <Widget>[
               Container(
-                margin: const EdgeInsets.only(top: 24),
                 width: double.infinity,
                 constraints: const BoxConstraints(minHeight: 48),
                 decoration: BoxDecoration(
