@@ -1,6 +1,6 @@
 # back
 
-A new Flutter project.
+Record and summarize the relevant knowledge of Flutter, and review the study and use of flutter in the past year or more.
 
 ## Getting Started
 
