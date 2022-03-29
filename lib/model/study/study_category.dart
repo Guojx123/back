@@ -22,7 +22,7 @@ List<DemoItemCategory> buildStudyCategoryList = [
 ];
 
 DemoItemCategory environment = DemoItemCategory(
-  name: '1.Flutter开发环境',
+  name: '1.Flutter',
   subName: '简介',
   icon: 'images/logo.png',
   list: buildEnvironmentDemoItems('lib/category/study/config/'),
@@ -83,8 +83,3 @@ DemoItemCategory optimization = DemoItemCategory(
   icon: 'images/custompaint.png',
   list: buildOptimizationDemoItems('lib/category/study/optimization/'),
 );
-
-
-
-
-

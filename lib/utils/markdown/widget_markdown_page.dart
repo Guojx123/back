@@ -40,13 +40,16 @@ class _MarkdownPageState extends State<MarkdownPage> {
     }
     return Scaffold(
       appBar: AppBar(
-        title: Text("${widget.title ?? "Demo "}"),
+        title: Text(widget.title ?? "Demo"),
       ),
       body: _markdownCodeString == null
           ? const Center(
               child: Text('Not Found'),
             )
-          : MarkdownWidget(data: _markdownCodeString!),
+          : Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: MarkdownWidget(data: _markdownCodeString!),
+            ),
     );
   }
 }

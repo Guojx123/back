@@ -5,6 +5,8 @@ import 'study_category_demo_list.dart';
 import 'study_main_page_list_item.dart';
 
 class StudyMainPage extends StatelessWidget {
+  const StudyMainPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
