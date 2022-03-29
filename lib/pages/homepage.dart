@@ -78,7 +78,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           'images/study_bg.jpg',
                           () {
                             Navigator.push(
-                                context, MaterialPageRoute(builder: (context) => StudyMainPage()));
+                              context,
+                              MaterialPageRoute(builder: (context) => StudyMainPage()),
+                            );
                           },
                         ),
                         PageWidget(
@@ -87,7 +89,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           'images/skill_bg.png',
                           () {
                             Navigator.push(
-                                context, MaterialPageRoute(builder: (context) => SkillMainPage()));
+                              context,
+                              MaterialPageRoute(builder: (context) => const SkillMainPage()),
+                            );
                           },
                         ),
                         PageWidget(
@@ -102,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(bottom: 12, left: 48, right: 48),
+                    margin: const EdgeInsets.only(bottom: 12, left: 36, right: 36),
                     child: ValueListenableBuilder(
                       valueListenable: notifier,
                       builder: (context, value, widget) {
@@ -110,8 +114,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           value: notifier.value,
                           valueColor: AlwaysStoppedAnimation(
                             Color.lerp(
-                              Color(0xFF03A89E),
-                              Color(0xFFFFD700),
+                              const Color(0xFF03A89E),
+                              const Color(0xFFFFD700),
                               notifier.value,
                             ),
                           ),

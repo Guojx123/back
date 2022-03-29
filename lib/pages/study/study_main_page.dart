@@ -9,12 +9,12 @@ class StudyMainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('学习路线'),
-        backgroundColor: Color(0xFF03A89E).withOpacity(0.8),
+        title: const Text('学习路线'),
+        backgroundColor: const Color(0xFF03A89E).withOpacity(0.8),
         elevation: 0,
       ),
       body: Container(
-        color: Color(0xFF03A89E).withOpacity(0.8),
+        color: const Color(0xFF03A89E).withOpacity(0.8),
         child: ListView.builder(
           itemBuilder: (context, index) {
             var itemCategory = buildStudyCategoryList[index];
