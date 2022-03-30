@@ -1,4 +1,5 @@
 import 'package:back/category/skill/animation/flip_time_card.dart';
+import 'package:back/category/skill/animation/text_show_up.dart';
 import 'package:back/widgets/base_widget.dart';
 import 'package:back/widgets/demo_item.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,18 @@ List<DemoItem> buildAnimationDemoItems(String codePath) {
         '翻页时间卡片',
         codePath + 'flip_time_card',
         const FlipTimeCard(),
+      ),
+    ),
+    DemoItem(
+      icon: Icons.data_thresholding,
+      title: '文字渐现',
+      subtitle: '简介',
+      keyword: 'text_show_up',
+      documentationUrl: 'https://flutter.cn/',
+      buildRoute: (context) => BaseWidget(
+        '文字渐现',
+        codePath + 'text_show_up',
+        const TextShowUp(),
       ),
     ),
   ];
