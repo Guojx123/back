@@ -93,9 +93,10 @@ flutter:
 
     - lib/category/skill/
     - lib/category/skill/business/
-    - lib/category/skill/notes/
     - lib/category/skill/conclusion/
     - lib/category/skill/patterns/
+    - lib/category/skill/notes/
+    - lib/category/skill/animation/
 
     - lib/category/util/
 
