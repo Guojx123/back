@@ -55,6 +55,8 @@ dependencies:
   # GetX
   get:
   get_storage:
+  wakelock:
+
 
 dev_dependencies:
   flutter_test:

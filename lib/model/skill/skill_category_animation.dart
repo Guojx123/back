@@ -1,3 +1,4 @@
+import 'package:back/category/skill/animation/flip_clock.dart';
 import 'package:back/category/skill/animation/flip_time_card.dart';
 import 'package:back/category/skill/animation/text_show_up.dart';
 import 'package:back/widgets/base_widget.dart';
@@ -41,6 +42,18 @@ List<DemoItem> buildAnimationDemoItems(String codePath) {
         '文字渐现',
         codePath + 'text_show_up',
         const TextShowUp(),
+      ),
+    ),
+    DemoItem(
+      icon: Icons.data_thresholding,
+      title: '翻页时钟',
+      subtitle: '简介',
+      keyword: 'flip_clock',
+      documentationUrl: 'https://flutter.cn/',
+      buildRoute: (context) => BaseWidget(
+        '翻页时钟',
+        codePath + 'flip_clock',
+        const FlipClockPage(),
       ),
     ),
   ];
