@@ -5,6 +5,7 @@ import 'package:back/Widgets/notfound.dart';
 import 'package:back/pages/widget/providercategory.dart';
 import 'package:back/utils/navigatormanager.dart';
 import 'package:back/utils/sp_util.dart';
+import 'package:back/utils/word_clock/src/time_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -28,6 +29,7 @@ void realRunApp() async {
           Provider(create: (_) => 1008),
           ChangeNotifierProvider(create: (_) => ChangeNotifyModel()),
           ChangeNotifierProvider(create: (_) => SelectorModel()),
+          ChangeNotifierProvider(create: (_) => TimeModel())
         ],
         child: MyApp(),
       ),

@@ -42,25 +42,21 @@ class _FlipClockState extends State<FlipClockPage> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return Scaffold(
-      backgroundColor: Colors.amberAccent,
-      appBar: null,
-      body: Center(
-        child: SizedBox(
-          height: (screenSize.width / 7 - 10) * 2 + 1,
-          child: FlipClock(
-            startTime: startTime,
-            digitColor: Colors.white,
-            backgroundColor: Colors.lightGreen,
-            digitSize: screenSize.width / 7,
-            borderRadius: const BorderRadius.all(Radius.circular(4.0)),
-            width: screenSize.width / 7 - 20,
-            height: (screenSize.width / 7 - 10) * 2,
-            screenWidth: screenSize.width,
-            screenHeight: screenSize.width,
-            timeLeft: const Duration(days: 365),
-            flipDirection: FlipDirection.up,
-          ),
+    return Center(
+      child: SizedBox(
+        height: (screenSize.width / 7 - 10) * 2 + 1,
+        child: FlipClock(
+          startTime: startTime,
+          digitColor: Colors.white,
+          backgroundColor: Colors.lightGreen,
+          digitSize: screenSize.width / 7,
+          borderRadius: const BorderRadius.all(Radius.circular(4.0)),
+          width: screenSize.width / 7 - 20,
+          height: (screenSize.width / 7 - 10) * 2,
+          screenWidth: screenSize.width,
+          screenHeight: screenSize.width,
+          timeLeft: const Duration(days: 365),
+          flipDirection: FlipDirection.up,
         ),
       ),
     );

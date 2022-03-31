@@ -1,5 +1,6 @@
 import 'package:back/category/skill/animation/flip_clock.dart';
 import 'package:back/category/skill/animation/flip_time_card.dart';
+import 'package:back/category/skill/animation/image_clock.dart';
 import 'package:back/category/skill/animation/text_show_up.dart';
 import 'package:back/widgets/base_widget.dart';
 import 'package:back/widgets/demo_item.dart';
@@ -54,6 +55,18 @@ List<DemoItem> buildAnimationDemoItems(String codePath) {
         '翻页时钟',
         codePath + 'flip_clock',
         const FlipClockPage(),
+      ),
+    ),
+    DemoItem(
+      icon: Icons.data_thresholding,
+      title: '图片时钟',
+      subtitle: '简介',
+      keyword: 'flip_clock',
+      documentationUrl: 'https://flutter.cn/',
+      buildRoute: (context) => BaseWidget(
+        '图片时钟',
+        codePath + 'word_clock',
+        const ImageClockPage(),
       ),
     ),
   ];
