@@ -12,7 +12,7 @@ import 'model.dart';
 ///   final myClockBuilder = (ClockModel model) => AnalogClock(model);
 ///
 /// Contestants: Do not edit this.
-typedef Widget ClockBuilder(ClockModel model);
+typedef ClockBuilder = Widget Function(ClockModel model);
 
 /// Wrapper for clock widget to allow for customizations.
 ///
@@ -28,7 +28,7 @@ typedef Widget ClockBuilder(ClockModel model);
 /// ```
 /// Contestants: Do not edit this.
 class ClockCustomizer extends StatefulWidget {
-  const ClockCustomizer(this._clock);
+  const ClockCustomizer(this._clock, {Key? key}) : super(key: key);
 
   /// The clock widget with [ClockModel], to update and display.
   final ClockBuilder _clock;
@@ -50,8 +50,12 @@ class _ClockCustomizerState extends State<ClockCustomizer> {
 
   @override
   void dispose() {
-    _model.removeListener(_handleModelChange);
-    _model.dispose();
+    try {
+      _model.removeListener(_handleModelChange);
+      _model.dispose();
+    } catch (e) {
+      debugPrint('clock dispose error:$e');
+    }
     super.dispose();
   }
 
@@ -171,7 +175,7 @@ class _ClockCustomizerState extends State<ClockCustomizer> {
     return Builder(
       builder: (BuildContext context) {
         return IconButton(
-          icon: Icon(Icons.settings),
+          icon: const Icon(Icons.settings),
           tooltip: 'Configure clock',
           onPressed: () {
             Scaffold.of(context).openEndDrawer();
