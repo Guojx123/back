@@ -1,5 +1,5 @@
 import 'package:back/utils/word_clock/src/customizer.dart';
-import 'package:back/utils/word_clock/src/image_clock.dart';
+import 'package:back/utils/word_clock/src/image_clock_widget.dart';
 import 'package:back/utils/word_clock/src/model.dart';
 import 'package:flutter/material.dart';
 
