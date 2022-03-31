@@ -97,7 +97,7 @@ class DigitPainter extends CustomPainter {
               text: digit,
               style: TextStyle(
                 fontWeight: FontWeight.w900,
-                fontSize: 1150,
+                fontSize: 1000,
                 color: Constants.digitColor,
               ),
             ),
@@ -107,12 +107,12 @@ class DigitPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    Rect rect = Offset(0, 0) & size;
+    Rect rect = const Offset(0, 0) & size;
     canvas.drawImage(image, Offset.zero, Paint());
     canvas.saveLayer(rect, Paint()..blendMode = BlendMode.dstATop);
     textPainter
       ..layout(minWidth: size.width)
-      ..paint(canvas, Offset(0, -220));
+      ..paint(canvas, const Offset(0, -220));
     canvas.restore();
   }
 

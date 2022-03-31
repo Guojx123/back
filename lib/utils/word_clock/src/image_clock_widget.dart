@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:back/utils/word_clock/src/time_model.dart';
 import 'package:back/utils/word_clock/src/weather_icon.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
@@ -60,8 +61,8 @@ class _ImageClockState extends State<ImageClock> {
   void _updateModel() => setState(() {});
 
   void _updateTime() {
-    // 修正：时间快了两秒
-    ImageClock.dateTime = DateTime.now().subtract(const Duration(seconds: 2));
+    // 修正：时间快了近两秒
+    ImageClock.dateTime = DateTime.now().subtract(const Duration(milliseconds: 1700));
     //update once a second
     _timer = Timer(
       const Duration(seconds: 1) - Duration(milliseconds: ImageClock.dateTime.millisecond),
@@ -82,14 +83,20 @@ class _ImageClockState extends State<ImageClock> {
       child: Container(
         color: Theme.of(context).brightness == Brightness.light
             ? Constants.digitColor
-            : Constants.darkBlue,
+            : Constants.darkBlack,
         child: Stack(
           alignment: Alignment.center,
           children: <Widget>[
-            Positioned(left: 0, top: 0, bottom: 0, right: 0, child: BackgroundAnimation()),
+            const Positioned(
+              left: 0,
+              top: 0,
+              bottom: 0,
+              right: 0,
+              child: BackgroundAnimation(),
+            ),
             TimeWidget(widget: widget),
             Positioned(
-              left: 0,
+              left: 20,
               bottom: 0,
               child: WeatherWidget(widget: widget),
             ),
@@ -200,6 +207,7 @@ class TimeWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          const Expanded(flex: 1, child: SizedBox()),
           Expanded(flex: 2, child: Digit((_, model) => model.h1)),
           Expanded(flex: 2, child: Digit((_, model) => model.h2)),
           const Expanded(
@@ -229,6 +237,7 @@ class TimeWidget extends StatelessWidget {
               AmPmIndicator(!widget.model.is24HourFormat),
             ],
           ),
+          const Expanded(flex: 1, child: SizedBox()),
         ],
       ),
     );

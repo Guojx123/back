@@ -61,13 +61,9 @@ List<DemoItem> buildAnimationDemoItems(String codePath) {
       icon: Icons.data_thresholding,
       title: '图片时钟',
       subtitle: '简介',
-      keyword: 'flip_clock',
+      keyword: 'image_clock',
       documentationUrl: 'https://flutter.cn/',
-      buildRoute: (context) => BaseWidget(
-        '图片时钟',
-        codePath + 'word_clock',
-        const ImageClockPage(),
-      ),
+      buildRoute: (context) => const ImageClockPage(),
     ),
   ];
 }

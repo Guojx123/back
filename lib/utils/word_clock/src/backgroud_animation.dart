@@ -7,6 +7,8 @@ import 'constants.dart';
 
 /// Show random connected nodes animation in background
 class BackgroundAnimation extends StatefulWidget {
+  const BackgroundAnimation({Key? key}) : super(key: key);
+
   @override
   _BackgroundAnimationState createState() => _BackgroundAnimationState();
 }
@@ -45,22 +47,25 @@ class _BackgroundAnimationState extends State<BackgroundAnimation> with TickerPr
       return a;
     });
 
-    controllers.forEach((c) => c.forward());
+    for (var c in controllers) {
+      c.forward();
+    }
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-        painter: BackgroudPainter(
-      animations,
-      Theme.of(context).brightness == Brightness.light
-          ? Constants.backgroudPatternBlue
-          : Constants.backgroudPatternBlueDark,
-      Theme.of(context).brightness == Brightness.light
-          ? Constants.backgroudCirclePatternBlue
-          : Constants.backgroudCirclePatternBlueDark,
-    ));
+      painter: BackgroundPainter(
+        animations,
+        Theme.of(context).brightness == Brightness.light
+            ? Constants.backgroudPatternBlue
+            : Constants.backgroudPatternBlueDark,
+        Theme.of(context).brightness == Brightness.light
+            ? Constants.backgroudCirclePatternBlue
+            : Constants.backgroudCirclePatternBlue,
+      ),
+    );
   }
 
   @override
@@ -70,12 +75,12 @@ class _BackgroundAnimationState extends State<BackgroundAnimation> with TickerPr
   }
 }
 
-class BackgroudPainter extends CustomPainter {
+class BackgroundPainter extends CustomPainter {
   final Paint paintLine;
   final Paint paintCircle;
   List<Animation<Offset>> points;
 
-  BackgroudPainter(this.points, Color line, Color circle)
+  BackgroundPainter(this.points, Color line, Color circle)
       : paintLine = Paint()
           ..color = line
           ..isAntiAlias = true

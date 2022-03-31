@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Constants {
   static Color darkBlue = Color(0xFF001a33);
+  static Color darkBlack = Color(0xFF000000);
   static Color lessDarkBlue = Color(0xFF004280);
   static Color lessDarkBlueWithOpacity = Color(0xB0004280);
   static Color backgroudPatternBlue = Color(0x5004280);

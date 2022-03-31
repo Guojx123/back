@@ -31,7 +31,7 @@ void realRunApp() async {
           ChangeNotifierProvider(create: (_) => SelectorModel()),
           ChangeNotifierProvider(create: (_) => TimeModel())
         ],
-        child: MyApp(),
+        child: const MyApp(),
       ),
     );
   });
@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.teal,
         ),
-        home: MyHomePage(title: 'Back'),
+        home: const MyHomePage(title: 'Back'),
         onUnknownRoute: (RouteSettings setting) {
           return MaterialPageRoute(builder: (context) => NotFoundWidget());
         },
