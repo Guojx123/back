@@ -60,7 +60,8 @@ class _ImageClockState extends State<ImageClock> {
   void _updateModel() => setState(() {});
 
   void _updateTime() {
-    ImageClock.dateTime = DateTime.now();
+    // 修正：时间快了两秒
+    ImageClock.dateTime = DateTime.now().subtract(const Duration(seconds: 2));
     //update once a second
     _timer = Timer(
       const Duration(seconds: 1) - Duration(milliseconds: ImageClock.dateTime.millisecond),
