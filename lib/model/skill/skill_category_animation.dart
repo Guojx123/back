@@ -1,5 +1,6 @@
 import 'package:back/category/skill/animation/flip_clock.dart';
 import 'package:back/category/skill/animation/flip_time_card.dart';
+import 'package:back/category/skill/animation/galaxy_clock.dart';
 import 'package:back/category/skill/animation/image_clock.dart';
 import 'package:back/category/skill/animation/lava_clock.dart';
 import 'package:back/category/skill/animation/text_show_up.dart';
@@ -73,6 +74,14 @@ List<DemoItem> buildAnimationDemoItems(String codePath) {
       keyword: 'lava_clock',
       documentationUrl: 'https://flutter.cn/',
       buildRoute: (context) => const LavaClockPage(),
+    ),
+    DemoItem(
+      icon: Icons.data_thresholding,
+      title: '同心圆时钟',
+      subtitle: '简介',
+      keyword: 'galaxy_clock',
+      documentationUrl: 'https://flutter.cn/',
+      buildRoute: (context) => const GalaxyClockPage(),
     ),
   ];
 }
