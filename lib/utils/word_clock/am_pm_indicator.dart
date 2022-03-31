@@ -1,4 +1,4 @@
-import 'package:back/utils/word_clock/src/time_model.dart';
+import 'package:back/utils/word_clock/time_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

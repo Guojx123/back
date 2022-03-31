@@ -1,17 +1,16 @@
 import 'dart:async';
 
-import 'package:back/utils/word_clock/src/time_model.dart';
-import 'package:back/utils/word_clock/src/weather_icon.dart';
+import 'package:back/utils/word_clock/time_model.dart';
+import 'package:back/utils/word_clock/weather_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
+import '../clock/model.dart';
 import 'am_pm_indicator.dart';
-import 'backgroud_animation.dart';
+import 'background_animation.dart';
 import 'constants.dart';
 import 'digit.dart';
-import 'model.dart';
 
 /// Root Clock Widget (below ClockCustomiser)
 class ImageClock extends StatefulWidget {
@@ -62,7 +61,7 @@ class _ImageClockState extends State<ImageClock> {
 
   void _updateTime() {
     // 修正：时间快了近两秒
-    ImageClock.dateTime = DateTime.now().subtract(const Duration(milliseconds: 1700));
+    ImageClock.dateTime = DateTime.now().subtract(const Duration(milliseconds: 1750));
     //update once a second
     _timer = Timer(
       const Duration(seconds: 1) - Duration(milliseconds: ImageClock.dateTime.millisecond),

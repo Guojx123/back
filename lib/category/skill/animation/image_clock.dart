@@ -1,7 +1,7 @@
+import 'package:back/utils/clock/customizer.dart';
+import 'package:back/utils/clock/model.dart';
 import 'package:back/utils/direction_control.dart';
-import 'package:back/utils/word_clock/src/customizer.dart';
-import 'package:back/utils/word_clock/src/image_clock_widget.dart';
-import 'package:back/utils/word_clock/src/model.dart';
+import 'package:back/utils/word_clock/image_clock_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

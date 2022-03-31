@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../clock/model.dart';
 import 'constants.dart';
-import 'model.dart';
 
 class WeatherIcon extends StatelessWidget {
   final WeatherCondition weatherCondition;
