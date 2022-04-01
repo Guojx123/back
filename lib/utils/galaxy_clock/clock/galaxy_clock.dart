@@ -74,10 +74,12 @@ class _GalaxyClockState extends State<GalaxyClock> {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        final minutesDiameter = constraints.maxHeight - 40;
+        final secondDiameter = constraints.maxHeight - 50;
+        final secondWidth = 0.05 * secondDiameter;
+        final minutesDiameter = constraints.maxHeight - 80;
         final minutesWidth = 0.1 * minutesDiameter;
         final hoursDiameter = minutesDiameter - minutesWidth * 2 + 0.5;
-        final hoursWidth = 0.2 * minutesDiameter + 0.5;
+        final hoursWidth = 0.2 * hoursDiameter + 0.5;
         final centerDiameter = 0.4 * minutesDiameter + 0.5;
 
         return Semantics.fromProperties(
@@ -90,6 +92,12 @@ class _GalaxyClockState extends State<GalaxyClock> {
               alignment: Alignment.center,
               children: [
                 Background(),
+                ClockCircle(
+                  diameter: secondDiameter,
+                  strokeWidht: secondWidth,
+                  theme: theme,
+                  angleRadians: (_now.second * radiansPerMinute),
+                ),
                 ClockCircle(
                   diameter: minutesDiameter,
                   strokeWidht: minutesWidth,

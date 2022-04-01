@@ -11,13 +11,13 @@ class ClockTheme {
   );
 
   static const ClockTheme white = ClockTheme(
-    startColor: Color(0xFF81D4FA),
-    endColor: Color(0xFFEEEEEE),
+    startColor: Color(0xFF5F9EA0),
+    endColor: Color(0xFFF0FFFF),
   );
 
   static const ClockTheme blue = ClockTheme(
-    startColor: Color(0xFF1A237E),
-    endColor: Color(0xFF03A9F4),
+    startColor: Color(0xFF000080),
+    endColor: Color(0xFF6495ED),
   );
 
   static const ClockTheme grey = ClockTheme(
