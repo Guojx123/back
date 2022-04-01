@@ -7,15 +7,14 @@ import 'package:intl/intl.dart';
 import 'lava_painter.dart';
 
 List<Color> colorList = [
-  const Color(0xfff857a6),
-  Colors.blue,
-  Colors.red,
-  Colors.orange,
-  Colors.deepPurpleAccent,
-  Colors.yellow,
-  Colors.green,
-  Colors.deepPurple,
-  Colors.cyan,
+  const Color(0xFFDB7093),
+  const Color(0xFF4169E1),
+  const Color(0xFFFFA07A),
+  const Color(0xFFBA55D3),
+  const Color(0xFF48D1CC),
+  const Color(0xFF808000),
+  const Color(0xFF8FBC8F),
+  const Color(0xFFBA55D3),
   const Color(0xffff5858)
 ];
 
