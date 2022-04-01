@@ -35,29 +35,31 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons:
   intl: 0.17.0
-  flutter_markdown:
-  share:
-  provider:
-  shared_preferences:
-  path_provider:
-  sqflite:
-  url_launcher:
-  async:
-  visibility_detector:
-  scrollable_positioned_list:
-  dio:
-  retrofit:
+  flutter_markdown: 0.6.9+1
+  share: 2.0.4
+  provider: 6.0.2
+  shared_preferences: 2.0.13
+  path_provider: 2.0.9
+  sqflite: 2.0.2
+  url_launcher: 6.0.20
+  async: 2.8.2
+  visibility_detector: 0.2.2
+  scrollable_positioned_list: 0.2.3
+  dio: 4.0.4
+  retrofit: 3.0.1+1
 #  webview_flutter:
-  date_format:
-  image:
-  markdown_widget:
+  date_format: 2.0.5
+  image: 3.1.3
+  markdown_widget: 1.2.8
   # 动画
-  simple_animations:
+  simple_animations: 4.0.1
   # GetX
-  get:
-  get_storage:
-  wakelock:
-
+  get: 4.6.1
+  get_storage: 2.0.3
+  wakelock: 0.6.1+2
+  permission_handler: ^8.2.5
+  image_gallery_saver: ^1.7.1
+  image_picker: ^0.8.4+2
 
 dev_dependencies:
   flutter_test:

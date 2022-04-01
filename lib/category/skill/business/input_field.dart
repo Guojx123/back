@@ -2,17 +2,17 @@ import 'package:back/widgets/subtitle_widget.dart';
 import 'package:back/widgets/title_widget.dart';
 import 'package:flutter/material.dart';
 
-class InputField extends StatefulWidget {
-  const InputField({Key? key}) : super(key: key);
+class InputFieldPage extends StatefulWidget {
+  const InputFieldPage({Key? key}) : super(key: key);
 
   @override
-  _InputFieldState createState() => _InputFieldState();
+  _InputFieldPageState createState() => _InputFieldPageState();
 }
 
-class _InputFieldState extends State<InputField> {
+class _InputFieldPageState extends State<InputFieldPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: ListView(
