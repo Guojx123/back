@@ -17,10 +17,10 @@ void realRunApp() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // 竖屏
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  //   DeviceOrientation.portraitDown,
+  // ]);
 
   init().then((_) {
     runApp(
